@@ -3,43 +3,189 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Adobleerrejota - Playeras Personalizadas</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <title>Adobleerrejota</title>
   <style>
-    :root {
-      --bg: #121212;
-      --text: #f1f1f1;
-      --accent: #f04e30;
-      --accent-hover: #d94425;
-    }
-
+    /* Reset básico */
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
 
     body {
-      font-family: 'Poppins', sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #111;
+      color: #f5f5f5;
       line-height: 1.6;
     }
 
     header {
-      background-color: #1a1a1a;
+      background-color: #000;
       padding: 30px 20px;
       text-align: center;
+      border-bottom: 1px solid #333;
     }
 
     header h1 {
       font-size: 2.5rem;
-      font-weight: 700;
       letter-spacing: 2px;
+      text-transform: uppercase;
     }
 
     nav {
-      margin-top: 10px;
+      margin-top: 15px;
     }
 
-    nav a
+    nav a {
+      color: #f5f5f5;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #999;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    section {
+      margin-bottom: 60px;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      border-left: 4px solid #f5f5f5;
+      padding-left: 10px;
+    }
+
+    .placeholder {
+      background-color: #222;
+      height: 250px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #777;
+      font-size: 1.2rem;
+      font-style: italic;
+    }
+
+    .contact-form {
+      background: #1a1a1a;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .contact-form label {
+      display: block;
+      margin-top: 15px;
+      font-weight: 600;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 8px;
+      background: #0e0e0e;
+      border: 1px solid #333;
+      color: #f5f5f5;
+      border-radius: 4px;
+    }
+
+    .contact-form button {
+      margin-top: 20px;
+      background-color: #f5f5f5;
+      color: #000;
+      padding: 12px;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 4px;
+      width: 100%;
+      transition: background-color 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background-color: #ddd;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      background: #000;
+      color: #666;
+      margin-top: 60px;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Adobleerrejota</h1>
+    <nav>
+      <a href="#productos">Productos</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="productos">
+      <h2>Playeras Oversize</h2>
+      <div class="placeholder">Aquí va tu imagen de producto</div>
+      <div class="placeholder">Aquí va otra imagen</div>
+    </section>
+
+    <section id="nosotros">
+      <h2>Sobre Adobleerrejota</h2>
+      <p>
+        Somos un proyecto enfocado en el diseño de playeras oversize personalizadas. Usamos impresión DTF sobre camisetas de calidad premium para ofrecerte comodidad, estilo y autenticidad. Nuestra misión es que vistas como piensas: diferente.
+      </p>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <form class="contact-form" action="mailto:tuemail@example.com" method="post" enctype="text/plain">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" required />
+
+        <label for="email">Correo Electrónico</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Adobleerrejota. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
